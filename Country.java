@@ -13,11 +13,11 @@ public class Country extends JFrame {
 
 	Country() {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Taxi Booking");
+        this.setTitle("Ride Xpress");
         this.setSize(960, 600);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
-		//this.setBorder()
+		
 		
 		c = this.getContentPane();
         c.setLayout(null);
@@ -49,7 +49,7 @@ public class Country extends JFrame {
 		btn2 = new JButton("CAR");
         btn2.setBounds(170, 350, 100, 30);
         btn2.setFont(f2);
-        //btn2.setCursor(cursor);
+       
         btn2.setForeground(Color.WHITE);
         btn2.setBackground(Color.decode("#2E75B6"));
         c.add(btn2);
@@ -59,14 +59,14 @@ public class Country extends JFrame {
 
                 car us = new car();
                 us.setVisible(true);
-                //setVisible(false);
+               
             }
         });
 		
 		btn3 = new JButton("BIKE");
         btn3.setBounds(390, 350, 100, 30);
         btn3.setFont(f2);
-        //btn2.setCursor(cursor);
+       
         btn3.setForeground(Color.WHITE);
         btn3.setBackground(Color.decode("#C00060"));
         c.add(btn3);
@@ -76,14 +76,14 @@ public class Country extends JFrame {
 
                 bike us = new bike();
                 us.setVisible(true);
-                //setVisible(false);
+               
             }
         });
 		
 		btn4 = new JButton("CNG");
         btn4.setBounds(610, 350, 100, 30);
         btn4.setFont(f2);
-        //btn4.setCursor(cursor);
+       
         btn4.setForeground(Color.WHITE);
         btn4.setBackground(Color.decode("#00C000"));
         c.add(btn4);
@@ -93,7 +93,7 @@ public class Country extends JFrame {
 
                 cng us = new cng();
                 us.setVisible(true);
-                //setVisible(false);
+                
             }
         });
 		
@@ -104,14 +104,9 @@ public class Country extends JFrame {
 		
 		logo = new ImageIcon(getClass().getResource("/pic/logo2.png"));
         imgLabel = new JLabel(logo);
-        //imgLabel.setBounds(0, 0,logo.getIconWidth(), logo.getIconHeight());
+        
         c.add(imgLabel);
-		imgLabel.setSize(logo.getIconWidth(), logo.getIconHeight());
-		
-		
-		
-		
-		
+		imgLabel.setSize(logo.getIconWidth(), logo.getIconHeight());		
 		
 	}
 		

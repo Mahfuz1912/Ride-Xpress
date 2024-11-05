@@ -24,7 +24,7 @@ public class Homeus22 extends JFrame implements ActionListener {
 
    public Homeus2() {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Taxi Booking");
+        this.setTitle("Ride Xpress");
         this.setSize(960, 600);
         this.setLocationRelativeTo(null);
         this.setResizable(false);

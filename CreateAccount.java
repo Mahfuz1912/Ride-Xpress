@@ -149,7 +149,7 @@ public class CreateAccount implements ActionListener {
 		//CreateAccountframe.add(signupr1);
 		CreateAccountframe.add(CreateAccountPageImg);
 
-		CreateAccountframe.setTitle("Taxi Booking|Create Account");
+		CreateAccountframe.setTitle("Ride Xpress | Create Account");
 		CreateAccountframe.setSize(960, 600);
 
 		CreateAccountframe.setLocationRelativeTo(null);
@@ -204,7 +204,7 @@ public class CreateAccount implements ActionListener {
             		printWriter.println("Password: "+pass);
             		printWriter.println("Phone Number: "+cnumber);
             		printWriter.println("Email: "+mail);
-            		printWriter.println("=========================================");
+            		printWriter.println("======Ride=========Xpress===============");
             		printWriter.close();
 				} 
         		

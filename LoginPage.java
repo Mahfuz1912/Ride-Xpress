@@ -19,7 +19,7 @@ public class LoginPage extends JFrame implements ActionListener {
     public LoginPage() {
         font = new Font("Lost Signal", Font.PLAIN, 23);
 
-        this.setTitle("Taxi Booking");
+        this.setTitle("Ride Xpress Presented By S.A. Mahfuz");
         this.setSize(960, 600);
         this.setLayout(null);
         this.setResizable(false);
