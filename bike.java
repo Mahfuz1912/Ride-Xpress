@@ -181,7 +181,6 @@ public class bike extends JFrame {
         imgLabel.setBounds(0, 0,logo.getIconWidth(), logo.getIconHeight());
         c.add(imgLabel);
 		
-		
 	}
 	public static void main(String[] args) {
         bike frame = new bike();

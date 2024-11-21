@@ -34,7 +34,6 @@ public class SearchingForRide extends JFrame {
         imgLabel.setBounds(0, 0,logo.getIconWidth(), logo.getIconHeight());
         add(imgLabel);
 
-        
         JProgressBar progressBar = new JProgressBar();
         progressBar.setIndeterminate(true); 
         add(progressBar, BorderLayout.SOUTH);

@@ -47,8 +47,7 @@ public class SearchingForRide1 extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 
-                dispose();
-                
+                dispose();              
                 
                 new bike().setVisible(true);
             }

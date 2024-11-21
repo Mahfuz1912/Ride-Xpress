@@ -5,5 +5,6 @@ public class Main
         LoginPage loginPage = new LoginPage();
         loginPage.setLocationRelativeTo(null);
         loginPage.setVisible(true);
+        
     }
 }

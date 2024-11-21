@@ -48,8 +48,7 @@ public class SearchingForRide3 extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 
                 dispose();
-                
-                
+                                
                 new cng().setVisible(true);
             }
         });
