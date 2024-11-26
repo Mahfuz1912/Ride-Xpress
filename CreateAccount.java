@@ -2,11 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
-
 import static javax.swing.JOptionPane.showMessageDialog;
-
 public class CreateAccount implements ActionListener {
-
 	JFrame CreateAccountframe;
 	JLabel firstNameLabel;
 	JLabel lastNameLabel;
@@ -28,12 +25,10 @@ public class CreateAccount implements ActionListener {
 	JTextField emailText;
 	JTextField phoneNmbrTextField;
 	JButton signupr,btn1;
-	//JButton signupr1;
 	Font font,f2;
 	ImageIcon icon;
 	CreateAccount() {
 		
-
 		CreateAccountframe = new JFrame();
 		icon = new ImageIcon("Images/FrameIcon.png");
         CreateAccountframe.setIconImage(icon.getImage());
@@ -50,7 +45,6 @@ public class CreateAccount implements ActionListener {
 		
 		btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-
                 LoginPage us = new LoginPage();
                 us.setVisible(true);
                 
@@ -69,60 +63,44 @@ public class CreateAccount implements ActionListener {
 		leftPanel.add(frameImage);
 		
 		f2 = new Font("Rockwell Extra Bold", Font.PLAIN, 18);
-
 		Font headerText = new Font("Williesh", Font.BOLD, 28);
-
 		firstNameLabel = new JLabel("Enter Your First Name");
 		firstNameLabel.setBounds(590, 60, 150, 25);
 		firstNameLabel.setForeground(Color.black);
-
 		lastNameLabel = new JLabel("Enter Your Last Name");
 		lastNameLabel.setBounds(590, 120, 150, 25);
 		lastNameLabel.setForeground(Color.black);
-
 		userNameLabel2 = new JLabel("Enter Username");
 		userNameLabel2.setBounds(590, 180, 150, 25);
 		userNameLabel2.setForeground(Color.black);
-
 		passwordLabel2 = new JLabel("Password");
 		passwordLabel2.setBounds(590, 240, 150, 25);
 		passwordLabel2.setForeground(Color.black);
-
 		emailLabel = new JLabel("E-mail");
 		emailLabel.setBounds(590, 300, 150, 25);
 		emailLabel.setForeground(Color.black);
-
 		phoneNmbrLabel = new JLabel("Contact Number");
 		phoneNmbrLabel.setBounds(590, 360, 150, 25);
 		phoneNmbrLabel.setForeground(Color.black);
-
-
 		CreateAccountPageText = new JLabel("Create Account");
 		CreateAccountPageText.setBounds(600, 0, 230, 60);
 		CreateAccountPageText.setFont(headerText);
 		CreateAccountPageText.setForeground(Color.BLACK);
 		
-
 		firstNameText = new JTextField();
 		firstNameText.setBounds(590, 80, 240, 35);
-
 		lastNameText = new JTextField();
 		lastNameText.setBounds(590, 140, 240, 35);
-
 		userNameTextr = new JTextField();
 		userNameTextr.setBounds(590, 200, 240, 35);
 		
 		passwordTextr = new JPasswordField();
 		passwordTextr.setBounds(590, 260, 240, 35);
-
 		emailText = new JTextField();
 		emailText.setBounds(590, 320, 240, 35);
-
 		phoneNmbrTextField = new JTextField();
 		phoneNmbrTextField.setBounds(590, 380, 240, 35);
-
 		
-
 		signupr = new JButton("Sign Up");
 		signupr.setBounds(590, 440, 240, 35);
 		signupr.setBackground(Color.RED);
@@ -131,7 +109,6 @@ public class CreateAccount implements ActionListener {
 		CreateAccountPageImg = new JLabel();
 		CreateAccountPageImg.setIcon(new ImageIcon(""));
 		CreateAccountPageImg.setBounds(0, -290, 1902, 1076);
-
 		CreateAccountframe.add(firstNameLabel);
 		CreateAccountframe.add(lastNameLabel);
 		CreateAccountframe.add(userNameLabel2);
@@ -146,22 +123,16 @@ public class CreateAccount implements ActionListener {
 		CreateAccountframe.add(emailText);
 		CreateAccountframe.add(phoneNmbrTextField);
 		CreateAccountframe.add(signupr);
-		//CreateAccountframe.add(signupr1);
 		CreateAccountframe.add(CreateAccountPageImg);
-
 		CreateAccountframe.setTitle("Ride Xpress | Create Account");
 		CreateAccountframe.setSize(960, 600);
-
 		CreateAccountframe.setLocationRelativeTo(null);
 		CreateAccountframe.setLayout(null);
 		CreateAccountframe.setVisible(true);
 		CreateAccountframe.setResizable(false);
         CreateAccountframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
 		signupr.addActionListener(this);
-
 	}
-
 	public void actionPerformed(ActionEvent e){  
     
 		String fname = firstNameText.getText();
@@ -204,7 +175,7 @@ public class CreateAccount implements ActionListener {
             		printWriter.println("Password: "+pass);
             		printWriter.println("Phone Number: "+cnumber);
             		printWriter.println("Email: "+mail);
-            		printWriter.println("======Ride=========Xpress===============");
+            		printWriter.println("======Ride=========Xpress========");
             		printWriter.close();
 				} 
         		
@@ -212,27 +183,18 @@ public class CreateAccount implements ActionListener {
         		catch (Exception e2) {
 					
         			System.out.println(e2);
-				}
-        		
-        		
-        		
-        		
+				}		
         		JOptionPane.showMessageDialog(null, "Account Created Successfully");
         		CreateAccountframe.setVisible(false);
         		new LoginPage();
-
 			}
         	
         
         		
 			}
 				
-
-
 			}
-
 	 public static void main(String[] args) {
 	 	new CreateAccount();
 	 }
-
 }

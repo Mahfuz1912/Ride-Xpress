@@ -2,20 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.logging.*;
-public class BikeDriver3 extends JFrame {
-	private JLabel DriverList;
-	private ImageIcon icon;
-    private JButton btn1;
-    private Font f2;
-    private JLabel ProfileLabel;
-    private JLabel DriverNameLabel;
-    private JLabel DriverNameLabel2;
-    private JLabel DriverNameLabel3;
-	private JLabel DriverNameLabel4;
-	private JLabel DriverNameLabel5;
-	private JLabel DriverNameLabel6;
-    private JLabel BackgroundImage;
-    public BikeDriver3() {
+public class CarDriver1 extends JFrame {
+    public CarDriver1() {
         initComponents();
     }
     private void initComponents() {
@@ -39,38 +27,38 @@ public class BikeDriver3 extends JFrame {
         setIconImage(icon.getImage());
         DriverList.setFont(new Font("Arial", Font.BOLD, 30));
         DriverList.setForeground(Color.black);
-        DriverList.setText("Bike Driver List");
+        DriverList.setText("Car Driver List");
         getContentPane().add(DriverList);
         DriverList.setBounds(390, 80, 250, 49);
-		
+        
 		btn1 = new JButton("Back");
         btn1.setBounds(20, 480, 100, 30);
         btn1.setFont(f2);
-       
+        
         btn1.setForeground(Color.black);
         btn1.setBackground(Color.decode("#C00000"));
         getContentPane().add(btn1);
 		
 		btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                bike us = new bike();
+                car us = new car();
                 us.setVisible(true);
                 setVisible(false);
             }
         });
         DriverNameLabel.setFont(new Font("Arial", Font.BOLD, 22));
         DriverNameLabel.setForeground(Color.black);
-        DriverNameLabel.setText("AB 12345-006");
+        DriverNameLabel.setText("AB 12345-000");
         getContentPane().add(DriverNameLabel);
         DriverNameLabel.setBounds(390, 225, 310, 30);
         DriverNameLabel2.setFont(new Font("Arial", Font.PLAIN, 24));
         DriverNameLabel2.setForeground(Color.black);
-        DriverNameLabel2.setText("Robarto");
+        DriverNameLabel2.setText("Cristiano");
         getContentPane().add(DriverNameLabel2);
         DriverNameLabel2.setBounds(390, 275, 350, 30);
         DriverNameLabel3.setFont(new Font("Arial", Font.PLAIN, 24));
 		DriverNameLabel3.setForeground(Color.black);
-        DriverNameLabel3.setText("SANCHEZ");
+        DriverNameLabel3.setText("Ronaldo");
         getContentPane().add(DriverNameLabel3);
         DriverNameLabel3.setBounds(390, 305, 600, 30);
 		DriverNameLabel4.setFont(new Font("Arial", Font.PLAIN, 17));
@@ -87,7 +75,7 @@ public class BikeDriver3 extends JFrame {
 		
 		DriverNameLabel6.setFont(new Font("Autography", Font.PLAIN, 19));
 		DriverNameLabel6.setForeground(Color.black);
-        DriverNameLabel6.setText("Robarto Sanchez");
+        DriverNameLabel6.setText("Cristiano Ronaldo");
         getContentPane().add(DriverNameLabel6);
         DriverNameLabel6.setBounds(270, 430, 600, 30);
         BackgroundImage.setIcon(new ImageIcon(getClass().getResource("/Images/License.png"))); 
@@ -100,11 +88,23 @@ public class BikeDriver3 extends JFrame {
     private void BackActionPerformed(ActionEvent evt) {
         
         System.out.println("Back button pressed");
+        
         this.dispose(); 
     }
     public static void main(String args[]) {
-       BikeDriver3 frame = new BikeDriver3();
+       CarDriver1 frame = new CarDriver1();
         frame.setVisible(true);
     }
-   
+    private JLabel DriverList;
+	private ImageIcon icon;
+    private JButton btn1;
+    private Font f2;
+    private JLabel ProfileLabel;
+    private JLabel DriverNameLabel;
+    private JLabel DriverNameLabel2;
+    private JLabel DriverNameLabel3;
+	private JLabel DriverNameLabel4;
+	private JLabel DriverNameLabel5;
+	private JLabel DriverNameLabel6;
+    private JLabel BackgroundImage;
 }

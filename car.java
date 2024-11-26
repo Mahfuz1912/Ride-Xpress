@@ -10,7 +10,7 @@ public class car extends JFrame {
     
 	car() {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Taxi Booking");
+        this.setTitle("Ride Xpress");
         this.setSize(960, 600);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
@@ -33,7 +33,6 @@ public class car extends JFrame {
         btn1.setBounds(30, 10, 100, 30);
         btn1.setFont(f2);
 		btn1.setFocusable(true);
-        //btn1.setCursor(cursor);
         btn1.setForeground(Color.WHITE);
         btn1.setBackground(Color.decode("#C00000"));
         c.add(btn1);
@@ -221,7 +220,7 @@ public class car extends JFrame {
 		btn7 = new JButton("Info");
         btn7.setBounds(830, 490, 100, 30);
         btn7.setFont(f2);
-        //btn2.setCursor(cursor);
+       
         btn7.setForeground(Color.WHITE);
         btn7.setBackground(Color.decode("#C00300"));
         c.add(btn7);

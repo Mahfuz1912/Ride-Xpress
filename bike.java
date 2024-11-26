@@ -1,23 +1,20 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-
 public class bike extends JFrame {
-
     private Container c;
     private ImageIcon icon, logo,logo2, Vehicle;
     private JLabel imgLabel,imgLabel2,j1,j2;
     private Font f1,f2,f3;
     private JButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, nBtn;
     private Cursor cursor;
-
 	bike() {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Taxi Booking");
+        this.setTitle("Ride Xpress");
         this.setSize(960, 600);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
-		//this.setBorder()
+		
 		
 		c = this.getContentPane();
         c.setLayout(null);
@@ -33,14 +30,13 @@ public class bike extends JFrame {
 		btn1 = new JButton("Back");
         btn1.setBounds(20, 500, 100, 30);
         btn1.setFont(f2);
-        //btn1.setCursor(cursor);
+       
         btn1.setForeground(Color.WHITE);
         btn1.setBackground(Color.decode("#C00000"));
         c.add(btn1);
 		
 		btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-
                 Vehicle us = new Vehicle();
                 us.setVisible(true);
                 

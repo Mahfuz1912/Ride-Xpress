@@ -1,7 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-
 public class homeus extends JFrame{
 	private Container c;
 	private JLabel j1, j2, imgLabel,j3,f;
@@ -9,8 +8,8 @@ public class homeus extends JFrame{
 	private ImageIcon icon, logo;
 	private JComboBox c1, c2;
 	private JButton btn1, btn2,nBtn;
-	private String[] place = {"From","Adabar","Badda","Bangsal", "Bimanbandar", "Cantonment", "Chowkbazar", "Darus Salam", "Demra","Dhakshinkhan", "Dhanmondi","Gendaria", "Gulshan", "Hatirjheel", "Hazaribagh","Jatrabari", "Kadamtali", "Kafrul", "Kalabagan","Kamrangirchar","Khilgaon", "Khilkhet", "Kotwali", "Lalbagh", "Mirpur", "Model", "Mohammadpur", "Motijheel", "New Market","Pallabi","Paltan" ,"Ramna", "Rampura", "Sabujbagh", "Shah Ali", "Shahbag", "Shahjahanpur", "Sher-e-Bangla", "Nagar" ,"Shyampur" ,"Sutrapur", "Tejgaon", "Industrial Area" ,"Tejgaon", "Turag","Uttar","Vatara","Bashundhara","Mirpur-12"};
-	private String[] place2 = {"To","Adabar","Badda","Bangsal", "Bimanbandar", "Cantonment", "Chowkbazar", "Darus Salam", "Demra","Dhakshinkhan", "Dhanmondi","Gendaria", "Gulshan", "Hatirjheel", "Hazaribagh","Jatrabari", "Kadamtali", "Kafrul", "Kalabagan","Kamrangirchar","Khilgaon", "Khilkhet", "Kotwali", "Lalbagh", "Mirpur", "Model", "Mohammadpur", "Motijheel", "New Market","Pallabi","Paltan" ,"Ramna", "Rampura", "Sabujbagh", "Shah Ali", "Shahbag", "Shahjahanpur", "Sher-e-Bangla", "Nagar" ,"Shyampur" ,"Sutrapur", "Tejgaon", "Industrial Area" ,"Tejgaon", "Turag","Uttar","Vatara","Bashundhara","Mirpur-12"};
+	private String[] place = {"From","Adabar","Badda","Bangsal", "Bimanbandar", "Cantonment", "Chowkbazar", "Darus Salam", "Demra","Dhakshinkhan", "Dhanmondi","Gendaria", "Gulshan", "Hatirjheel", "Hazaribagh","Jatrabari", "Kadamtali", "Kafrul", "Kalabagan","Kamrangirchar","Khilgaon", "Khilkhet", "Kotwali", "Lalbagh", "Mirpur", "Model", "Mohammadpur", "Motijheel", "New Market","Pallabi","Paltan" ,"Ramna", "Rampura", "Sabujbagh", "Shah Ali", "Shahbag", "Shahjahanpur", "Sher-e-Bangla", "Nagar" ,"Shyampur" ,"Sutrapur", "Tejgaon", "Industrial Area","Ashulia" ,"Tejgaon", "Turag","Uttar","Vatara","Bashundhara","Mirpur-12"};
+	private String[] place2 = {"To","Adabar","Badda","Bangsal", "Bimanbandar", "Cantonment", "Chowkbazar", "Darus Salam", "Demra","Dhakshinkhan", "Dhanmondi","Gendaria", "Gulshan", "Hatirjheel", "Hazaribagh","Jatrabari", "Kadamtali", "Kafrul", "Kalabagan","Kamrangirchar","Khilgaon", "Khilkhet", "Kotwali", "Lalbagh", "Mirpur", "Model", "Mohammadpur", "Motijheel", "New Market","Pallabi","Paltan" ,"Ramna", "Rampura", "Sabujbagh", "Shah Ali", "Shahbag", "Shahjahanpur", "Sher-e-Bangla", "Nagar" ,"Shyampur" ,"Sutrapur", "Tejgaon", "Industrial Area","Ashulia" ,"Tejgaon", "Turag","Uttar","Vatara","Bashundhara","Mirpur-12"};
 	
 	homeus(){
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -71,7 +70,6 @@ public class homeus extends JFrame{
 		
 		btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-
                 LoginPage us = new LoginPage();
                 us.setVisible(true);
                 
@@ -93,7 +91,6 @@ public class homeus extends JFrame{
 		
 		btn2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-
                 Vehicle us = new Vehicle();
                 us.setVisible(true);
                
@@ -113,7 +110,6 @@ public class homeus extends JFrame{
 		 nBtn = new JButton("");
         nBtn.setBounds(0, 0, 0, 0);
         c.add(nBtn);
-
 	}
 	
 	public static void main(String [] args){
