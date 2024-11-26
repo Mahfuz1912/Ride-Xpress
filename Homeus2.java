@@ -62,7 +62,6 @@ public class Homeus22 extends JFrame implements ActionListener {
         c2.setEditable(true);
         c2.setForeground(Color.blue);
         c.add(c2);
-
         submitButton = new JButton("Lets go");
         submitButton.addActionListener(this);
         submitButton.setBounds(230, 350, 100, 30);

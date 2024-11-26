@@ -3,9 +3,9 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.logging.*;
 
-public class CarDriver4 extends JFrame {
+public class CngDriver extends JFrame {
 
-    public CarDriver4() {
+    public CngDriver() {
         initComponents();
     }
 
@@ -33,14 +33,13 @@ public class CarDriver4 extends JFrame {
 
         DriverList.setFont(new Font("Arial", Font.BOLD, 30));
         DriverList.setForeground(Color.black);
-        DriverList.setText("Car Driver List");
+        DriverList.setText("CNG Driver List");
         getContentPane().add(DriverList);
         DriverList.setBounds(390, 80, 250, 49);
-       
+		
 		btn1 = new JButton("Back");
         btn1.setBounds(20, 480, 100, 30);
         btn1.setFont(f2);
-        //btn1.setCursor(cursor);
         btn1.setForeground(Color.black);
         btn1.setBackground(Color.decode("#C00000"));
         getContentPane().add(btn1);
@@ -48,7 +47,7 @@ public class CarDriver4 extends JFrame {
 		btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
 
-                car us = new car();
+                cng us = new cng();
                 us.setVisible(true);
                 setVisible(false);
             }
@@ -56,19 +55,19 @@ public class CarDriver4 extends JFrame {
 
         DriverNameLabel.setFont(new Font("Arial", Font.BOLD, 22));
         DriverNameLabel.setForeground(Color.black);
-        DriverNameLabel.setText("AB 12345-003");
+        DriverNameLabel.setText("AB 12345-007");
         getContentPane().add(DriverNameLabel);
         DriverNameLabel.setBounds(390, 225, 310, 30);
 
         DriverNameLabel2.setFont(new Font("Arial", Font.PLAIN, 24));
         DriverNameLabel2.setForeground(Color.black);
-        DriverNameLabel2.setText("PRIYA");
+        DriverNameLabel2.setText("RANVIR");
         getContentPane().add(DriverNameLabel2);
         DriverNameLabel2.setBounds(390, 275, 350, 30);
 
         DriverNameLabel3.setFont(new Font("Arial", Font.PLAIN, 24));
 		DriverNameLabel3.setForeground(Color.black);
-        DriverNameLabel3.setText("PATEL");
+        DriverNameLabel3.setText("KAPOOR");
         getContentPane().add(DriverNameLabel3);
         DriverNameLabel3.setBounds(390, 305, 600, 30);
 
@@ -86,11 +85,11 @@ public class CarDriver4 extends JFrame {
 		
 		DriverNameLabel6.setFont(new Font("Autography", Font.PLAIN, 19));
 		DriverNameLabel6.setForeground(Color.black);
-        DriverNameLabel6.setText("Priya Patel");
+        DriverNameLabel6.setText("ranvir Kapoor");
         getContentPane().add(DriverNameLabel6);
         DriverNameLabel6.setBounds(270, 430, 600, 30);
 
-        BackgroundImage.setIcon(new ImageIcon(getClass().getResource("/Images/License.png"))); // Set to actual path
+        BackgroundImage.setIcon(new ImageIcon(getClass().getResource("/Images/License.png"))); 
         BackgroundImage.setText("");
         getContentPane().add(BackgroundImage);
         BackgroundImage.setBounds(0, 0, 960, 600);
@@ -100,14 +99,14 @@ public class CarDriver4 extends JFrame {
     }
 
     private void BackActionPerformed(ActionEvent evt) {
-        // Handle back button action
+        
         System.out.println("Back button pressed");
-        // Close current frame or navigate to previous frame
-        this.dispose(); // Close the current window
+        
+        this.dispose(); 
     }
 
     public static void main(String args[]) {
-       CarDriver4 frame = new CarDriver4();
+       CngDriver frame = new CngDriver();
         frame.setVisible(true);
     }
 

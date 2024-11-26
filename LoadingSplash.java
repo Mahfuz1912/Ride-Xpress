@@ -59,8 +59,7 @@ public class LoadingSplash extends JFrame {
         e.printStackTrace();
       }
     }
-    
-   
+       
     dispose();
   }
   

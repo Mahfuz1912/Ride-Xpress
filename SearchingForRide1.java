@@ -10,7 +10,7 @@ public class SearchingForRide1 extends JFrame {
     
     public SearchingForRide1() {
         
-      super("Taxi Booking");
+      super("Ride Xpress");
 
        icon = new ImageIcon(getClass().getResource("/Images/FrameIcon.png"));
         this.setIconImage(icon.getImage());

@@ -2,12 +2,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.logging.*;
+
 public class CarDriver1 extends JFrame {
+
     public CarDriver1() {
         initComponents();
     }
+
     private void initComponents() {
 		f2 = new Font("Rockwell Extra Bold", Font.BOLD, 18);
+
         DriverList = new JLabel();
         btn1 = new JButton();
         ProfileLabel = new JLabel();
@@ -18,6 +22,7 @@ public class CarDriver1 extends JFrame {
 		DriverNameLabel5 = new JLabel();
 		DriverNameLabel6 = new JLabel();
         BackgroundImage = new JLabel();
+
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setTitle("Ride Xpress");
         setResizable(false);
@@ -25,6 +30,7 @@ public class CarDriver1 extends JFrame {
 		
 		icon = new ImageIcon(getClass().getResource("/Images/FrameIcon.png"));
         setIconImage(icon.getImage());
+
         DriverList.setFont(new Font("Arial", Font.BOLD, 30));
         DriverList.setForeground(Color.black);
         DriverList.setText("Car Driver List");
@@ -34,33 +40,38 @@ public class CarDriver1 extends JFrame {
 		btn1 = new JButton("Back");
         btn1.setBounds(20, 480, 100, 30);
         btn1.setFont(f2);
-        
+        //btn1.setCursor(cursor);
         btn1.setForeground(Color.black);
         btn1.setBackground(Color.decode("#C00000"));
         getContentPane().add(btn1);
 		
 		btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
+
                 car us = new car();
                 us.setVisible(true);
                 setVisible(false);
             }
         });
+
         DriverNameLabel.setFont(new Font("Arial", Font.BOLD, 22));
         DriverNameLabel.setForeground(Color.black);
         DriverNameLabel.setText("AB 12345-000");
         getContentPane().add(DriverNameLabel);
         DriverNameLabel.setBounds(390, 225, 310, 30);
+
         DriverNameLabel2.setFont(new Font("Arial", Font.PLAIN, 24));
         DriverNameLabel2.setForeground(Color.black);
-        DriverNameLabel2.setText("Cristiano");
+        DriverNameLabel2.setText("JOHN");
         getContentPane().add(DriverNameLabel2);
         DriverNameLabel2.setBounds(390, 275, 350, 30);
+
         DriverNameLabel3.setFont(new Font("Arial", Font.PLAIN, 24));
 		DriverNameLabel3.setForeground(Color.black);
-        DriverNameLabel3.setText("Ronaldo");
+        DriverNameLabel3.setText("DAVIS");
         getContentPane().add(DriverNameLabel3);
         DriverNameLabel3.setBounds(390, 305, 600, 30);
+
 		DriverNameLabel4.setFont(new Font("Arial", Font.PLAIN, 17));
 		DriverNameLabel4.setForeground(Color.black);
         DriverNameLabel4.setText("01-01-2022");
@@ -75,26 +86,31 @@ public class CarDriver1 extends JFrame {
 		
 		DriverNameLabel6.setFont(new Font("Autography", Font.PLAIN, 19));
 		DriverNameLabel6.setForeground(Color.black);
-        DriverNameLabel6.setText("Cristiano Ronaldo");
+        DriverNameLabel6.setText("John Davis");
         getContentPane().add(DriverNameLabel6);
         DriverNameLabel6.setBounds(270, 430, 600, 30);
-        BackgroundImage.setIcon(new ImageIcon(getClass().getResource("/Images/License.png"))); 
+
+        BackgroundImage.setIcon(new ImageIcon(getClass().getResource("/Images/License.png"))); // Set to actual path
         BackgroundImage.setText("");
         getContentPane().add(BackgroundImage);
         BackgroundImage.setBounds(0, 0, 960, 600);
+
         setSize(new Dimension(960, 600));
         setLocationRelativeTo(null);
     }
+
     private void BackActionPerformed(ActionEvent evt) {
-        
+        // Handle back button action
         System.out.println("Back button pressed");
-        
-        this.dispose(); 
+        // Close current frame or navigate to previous frame
+        this.dispose(); // Close the current window
     }
+
     public static void main(String args[]) {
        CarDriver1 frame = new CarDriver1();
         frame.setVisible(true);
     }
+
     private JLabel DriverList;
 	private ImageIcon icon;
     private JButton btn1;
@@ -108,3 +124,6 @@ public class CarDriver1 extends JFrame {
 	private JLabel DriverNameLabel6;
     private JLabel BackgroundImage;
 }
+
+
+

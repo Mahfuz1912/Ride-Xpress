@@ -32,7 +32,7 @@ public class LoginPage extends JFrame implements ActionListener {
         this.add(leftPanel);
         
         frameImage = new JLabel("");
-        Image frameimg = new ImageIcon(this.getClass().getResource("/Images/TaxiBooking.png")).getImage();
+        Image frameimg = new ImageIcon(this.getClass().getResource("/Images/Booking.png")).getImage();
         frameImage.setIcon(new ImageIcon(frameimg));
         frameImage.setBounds(0, -20, 480, 600);
         leftPanel.add(frameImage);

@@ -1,7 +1,9 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+
 public class car extends JFrame {
+
     private Container c;
     private ImageIcon icon, logo,logo2, Vehicle;
     private JLabel imgLabel,imgLabel2,j1,j2,j3,j4;
@@ -39,6 +41,7 @@ public class car extends JFrame {
 		
 		btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
+
                 Vehicle us = new Vehicle();
                 us.setVisible(true);
                 setVisible(false);
@@ -96,6 +99,7 @@ public class car extends JFrame {
 		btn10 = new JButton("Price");
         btn10.setBounds(260, 360, 100, 30);
         btn10.setFont(f3);
+        //btn2.setCursor(cursor);
         btn10.setForeground(Color.WHITE);
         btn10.setBackground(Color.decode("#C00060"));
         c.add(btn10);
@@ -110,6 +114,7 @@ public class car extends JFrame {
 					else {
 						
 					}
+  
             }
 			});
 		
@@ -118,6 +123,7 @@ public class car extends JFrame {
 		btn3 = new JButton("Info");
         btn3.setBounds(370, 360, 100, 30);
         btn3.setFont(f2);
+        
         btn3.setForeground(Color.WHITE);
         btn3.setBackground(Color.decode("#0000C0"));
         c.add(btn3);
@@ -126,12 +132,15 @@ public class car extends JFrame {
             public void actionPerformed(ActionEvent ae) {
 				CarDriver1 hm = new CarDriver1();
 						hm.setVisible(true);
+				
+			   
             }
 			});
 		
 		btn4 = new JButton("CALL");
         btn4.setBounds(150, 490, 100, 30);
         btn4.setFont(f2);
+       
         btn4.setForeground(Color.WHITE);
         btn4.setBackground(Color.decode("#00C000"));
         c.add(btn4);
@@ -149,6 +158,7 @@ public class car extends JFrame {
 		btn11 = new JButton("Price");
         btn11.setBounds(260, 490, 100, 30);
         btn11.setFont(f3);
+       
         btn11.setForeground(Color.WHITE);
         btn11.setBackground(Color.decode("#C00060"));
         c.add(btn11);
@@ -169,6 +179,7 @@ public class car extends JFrame {
 		btn5 = new JButton("Info");
         btn5.setBounds(370, 490, 100, 30);
         btn5.setFont(f2);
+       
         btn5.setForeground(Color.WHITE);
         btn5.setBackground(Color.decode("#0000C0"));
         c.add(btn5);
@@ -177,11 +188,15 @@ public class car extends JFrame {
             public void actionPerformed(ActionEvent ae) {
 				CarDriver2 hm = new CarDriver2();
 						hm.setVisible(true);
+				
+			  
             }
 			});
+		//
 		btn6 = new JButton("CALL");
         btn6.setBounds(610, 490, 100, 30);
         btn6.setFont(f2);
+        
         btn6.setForeground(Color.WHITE);
         btn6.setBackground(Color.decode("#00C000"));
         c.add(btn6);
@@ -220,7 +235,7 @@ public class car extends JFrame {
 		btn7 = new JButton("Info");
         btn7.setBounds(830, 490, 100, 30);
         btn7.setFont(f2);
-       
+        
         btn7.setForeground(Color.WHITE);
         btn7.setBackground(Color.decode("#C00300"));
         c.add(btn7);
@@ -230,14 +245,14 @@ public class car extends JFrame {
 				CarDriver4 hm = new CarDriver4();
 						hm.setVisible(true);
 				
-			
+			  
             }
 			});
 		
 		btn8 = new JButton("CALL");
         btn8.setBounds(610, 360, 100, 30);
         btn8.setFont(f2);
-       
+        
         btn8.setForeground(Color.WHITE);
         btn8.setBackground(Color.decode("#00C000"));
         c.add(btn8);
@@ -254,7 +269,8 @@ public class car extends JFrame {
 		
 		btn13 = new JButton("Price");
         btn13.setBounds(720, 360, 100, 30);
-        btn13.setFont(f3);s
+        btn13.setFont(f3);
+        
         btn13.setForeground(Color.WHITE);
         btn13.setBackground(Color.decode("#C00060"));
         c.add(btn13);
@@ -285,7 +301,7 @@ public class car extends JFrame {
 				CarDriver3 hm = new CarDriver3();
 						hm.setVisible(true);
 				
-			
+			  
             }
 			});
 		
@@ -297,6 +313,7 @@ public class car extends JFrame {
 	}
 		
 		public static void main(String[] args) {
+
         car frame = new car();
         frame.setVisible(true);
     }

@@ -18,7 +18,6 @@ public class Vehicle extends JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
 		
-		
 		c = this.getContentPane();
         c.setLayout(null);
         c.setBackground(Color.decode("#fbca0b"));

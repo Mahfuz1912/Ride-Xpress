@@ -17,8 +17,7 @@ public class Country extends JFrame {
         this.setSize(960, 600);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
-		
-		
+				
 		c = this.getContentPane();
         c.setLayout(null);
         c.setBackground(Color.decode("#fbca0b"));
