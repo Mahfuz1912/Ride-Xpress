@@ -92,6 +92,7 @@ public class LoginPage extends JFrame implements ActionListener {
             if (user.isEmpty() || pass.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Please Enter Username and Password");
             } else {
+<<<<<<< HEAD
                
                 String url = "jdbc:mysql://localhost:3306/ridexpress"; 
                 String dbUsername = "root"; 
@@ -103,6 +104,19 @@ public class LoginPage extends JFrame implements ActionListener {
                     Connection conn = DriverManager.getConnection(url, dbUsername, dbPassword);
                     
                     
+=======
+                // MySQL database connection info
+                String url = "jdbc:mysql://localhost:3306/ridexpress"; // Change DB URL as needed
+                String dbUsername = "root"; // Database username
+                String dbPassword = "Mahfuz@5101912"; // Database password
+                
+                try {
+                    // Load MySQL driver
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    Connection conn = DriverManager.getConnection(url, dbUsername, dbPassword);
+                    
+                    // SQL query to check username and password
+>>>>>>> 330a6e2ca53f9204d940975e187b169aa598d7ae
                     String query = "SELECT * FROM users WHERE username = ? AND password = ?";
                     PreparedStatement stmt = conn.prepareStatement(query);
                     stmt.setString(1, user);
@@ -111,7 +125,11 @@ public class LoginPage extends JFrame implements ActionListener {
                     ResultSet rs = stmt.executeQuery();
                     if (rs.next()) {
                         loginMsg.setText("Login successful!");
+<<<<<<< HEAD
                         homeus hm = new homeus(); 
+=======
+                        homeus hm = new homeus(); // Open home page on successful login
+>>>>>>> 330a6e2ca53f9204d940975e187b169aa598d7ae
                         hm.setVisible(true);
                         this.dispose();
                     } else {

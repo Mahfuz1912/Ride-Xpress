@@ -7,7 +7,11 @@ public class homeus extends JFrame{
     private JLabel j1, j2, imgLabel, j3, f;
     private Font f1, f2;
     private ImageIcon icon, logo;
+<<<<<<< HEAD
     private JComboBox<String> c1, c2;  
+=======
+    private JComboBox<String> c1, c2;  // Changed JComboBox to generic type JComboBox<String>
+>>>>>>> 330a6e2ca53f9204d940975e187b169aa598d7ae
     private JButton btn1, btn2, nBtn;
     private String[] place = {"From", "Adabar", "Badda", "Bangsal", "Bimanbandar", "Cantonment", "Chowkbazar", "Darus Salam", "Demra", "Dhakshinkhan", "Dhanmondi", "Gendaria", "Gulshan", "Hatirjheel", "Hazaribagh", "Jatrabari", "Kadamtali", "Kafrul", "Kalabagan", "Kamrangirchar", "Khilgaon", "Khilkhet", "Kotwali", "Lalbagh", "Mirpur", "Model", "Mohammadpur", "Motijheel", "New Market", "Pallabi", "Paltan", "Ramna", "Rampura", "Sabujbagh", "Shah Ali", "Shahbag", "Shahjahanpur", "Sher-e-Bangla", "Nagar", "Shyampur", "Sutrapur", "Tejgaon", "Industrial Area", "Ashulia", "Tejgaon", "Turag", "Uttar", "Vatara", "Bashundhara", "Mirpur-12"};
     private String[] place2 = {"To", "Adabar", "Badda", "Bangsal", "Bimanbandar", "Cantonment", "Chowkbazar", "Darus Salam", "Demra", "Dhakshinkhan", "Dhanmondi", "Gendaria", "Gulshan", "Hatirjheel", "Hazaribagh", "Jatrabari", "Kadamtali", "Kafrul", "Kalabagan", "Kamrangirchar", "Khilgaon", "Khilkhet", "Kotwali", "Lalbagh", "Mirpur", "Model", "Mohammadpur", "Motijheel", "New Market", "Pallabi", "Paltan", "Ramna", "Rampura", "Sabujbagh", "Shah Ali", "Shahbag", "Shahjahanpur", "Sher-e-Bangla", "Nagar", "Shyampur", "Sutrapur", "Tejgaon", "Industrial Area", "Ashulia", "Tejgaon", "Turag", "Uttar", "Vatara", "Bashundhara", "Mirpur-12"};
