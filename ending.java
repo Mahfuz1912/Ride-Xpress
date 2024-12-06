@@ -9,7 +9,7 @@ public class ending extends JFrame {
     private JLabel imgLabel;
     private Font f1,f2,f3;
     private JButton btn1;
-    //private Cursor cursor;
+   
 
 	ending() {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -48,7 +48,7 @@ public class ending extends JFrame {
         btn1.setBounds(30, 10, 100, 30);
         btn1.setFont(f2);
 		btn1.setFocusable(true);
-        //btn1.setCursor(cursor);
+       
         btn1.setForeground(Color.WHITE);
         btn1.setBackground(Color.decode("#C00000"));
         c.add(btn1);
@@ -58,7 +58,7 @@ public class ending extends JFrame {
 
                 Vehicle us = new Vehicle();
                 us.setVisible(true);
-                //setVisible(false);
+               
             }
 	});
 		

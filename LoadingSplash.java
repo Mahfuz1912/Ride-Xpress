@@ -18,7 +18,7 @@ public class LoadingSplash extends JFrame {
   
   public LoadingSplash() {
     
-    splashImage = new ImageIcon("splash.png").getImage();
+    splashImage = new ImageIcon("/pic/sapsh.png").getImage();
     
    
     splashPanel = new JPanel() {

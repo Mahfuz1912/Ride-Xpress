@@ -2,7 +2,7 @@ import java.awt.*;
 import javax.swing.*; 
 import java.awt.event.*;
 
-public class Homeus22 extends JFrame implements ActionListener {
+public class Homeus2 extends JFrame implements ActionListener {
     private Container c;
     private JLabel j1, j2, imgLabel, j3, f;
     private Font f1, f2, f3;
