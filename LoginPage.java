@@ -1,11 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.sql.*;
+
 public class LoginPage extends JFrame implements ActionListener {
     ImageIcon icon;
     JLabel username, password, loginMsg, frameImage;
@@ -22,7 +19,7 @@ public class LoginPage extends JFrame implements ActionListener {
         this.setLayout(null);
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
         icon = new ImageIcon("Images/FrameIcon.png");
         this.setIconImage(icon.getImage());
         this.getContentPane().setBackground(Color.decode("#fbca0b"));
@@ -36,21 +33,25 @@ public class LoginPage extends JFrame implements ActionListener {
         frameImage.setIcon(new ImageIcon(frameimg));
         frameImage.setBounds(0, -20, 480, 600);
         leftPanel.add(frameImage);
+        
         username = new JLabel("Username:");
         username.setBounds(510, 190, 247, 32);
         username.setForeground(Color.BLACK);
         username.setFont(font);
         this.add(username);
+        
         password = new JLabel("Password:");
         password.setBounds(510, 260, 247, 32);
         password.setForeground(Color.BLACK);
         password.setFont(font);
         this.add(password);
+        
         loginMsg = new JLabel();
         loginMsg.setBounds(635, 400, 450, 32);
         loginMsg.setForeground(Color.BLACK);
         loginMsg.setFont(new Font("System", Font.BOLD, 18));
         this.add(loginMsg);
+        
         usernameField = new JTextField();
         usernameField.setBounds(635, 194, 285, 32);
         usernameField.setFont(font);
@@ -60,6 +61,7 @@ public class LoginPage extends JFrame implements ActionListener {
         userPasswordField.setBounds(635, 264, 285, 32);
         userPasswordField.setFont(font);
         this.add(userPasswordField);
+        
         loginButton = new JButton("Log In");
         loginButton.setBounds(670, 334, 100, 35);
         loginButton.setBackground(Color.decode("#e8bd13"));
@@ -76,42 +78,54 @@ public class LoginPage extends JFrame implements ActionListener {
         resetButton.addActionListener(this);
         this.add(resetButton);
     }
-     public void actionPerformed(ActionEvent e) {
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
         if (e.getSource() == resetButton) {
             CreateAccount ca = new CreateAccount();
         }
+        
         if (e.getSource() == loginButton) {
             String user = usernameField.getText();
             String pass = new String(userPasswordField.getPassword());
-            String file = "Data/CreateAccount.txt";
+            
             if (user.isEmpty() || pass.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Please Enter Username and Password");
             } else {
-                try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-                    String line;
-                    boolean validLogin = false;
-                    while ((line = reader.readLine()) != null) {
-                        String userName = "User Name: " + user;
-                        String password = "Password: " + pass;
-                        if (line.equals(userName) && reader.readLine().equals(password)) {
-                            validLogin = true;
-                            break;
-                        }
-                    }
-                    if (validLogin) {
+                // MySQL database connection info
+                String url = "jdbc:mysql://localhost:3306/ridexpress"; // Change DB URL as needed
+                String dbUsername = "root"; // Database username
+                String dbPassword = "Mahfuz@5101912"; // Database password
+                
+                try {
+                    // Load MySQL driver
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    Connection conn = DriverManager.getConnection(url, dbUsername, dbPassword);
+                    
+                    // SQL query to check username and password
+                    String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+                    PreparedStatement stmt = conn.prepareStatement(query);
+                    stmt.setString(1, user);
+                    stmt.setString(2, pass);
+                    
+                    ResultSet rs = stmt.executeQuery();
+                    if (rs.next()) {
                         loginMsg.setText("Login successful!");
-                        homeus hm = new homeus(); // Opens the home page upon successful login
+                        homeus hm = new homeus(); // Open home page on successful login
                         hm.setVisible(true);
                         this.dispose();
                     } else {
                         loginMsg.setText("Incorrect username or password");
                     }
-                } catch (IOException ioException) {
-                    JOptionPane.showMessageDialog(null, "Error reading file", "Error", JOptionPane.ERROR_MESSAGE);
+                    conn.close();
+                } catch (SQLException | ClassNotFoundException ex) {
+                    JOptionPane.showMessageDialog(null, "Error connecting to database", "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
                 }
             }
         }
     }
+
     public static void main(String[] args) {
         new LoginPage().setVisible(true);
     }
