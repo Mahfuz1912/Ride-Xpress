@@ -133,19 +133,11 @@ public class CreateAccount implements ActionListener {
         signupr.addActionListener(this);
     }
 
-<<<<<<< HEAD
     
     private Connection connectToDatabase() {
         String url = "jdbc:mysql://localhost:3306/ridexpress";
         String user = "root"; 
         String password = "Mahfuz@5101912";
-=======
-    // Database connection method
-    private Connection connectToDatabase() {
-        String url = "jdbc:mysql://localhost:3306/ridexpress"; // Replace with your database details
-        String user = "root"; // Replace with your MySQL username
-        String password = "Mahfuz@5101912"; // Replace with your MySQL password
->>>>>>> 330a6e2ca53f9204d940975e187b169aa598d7ae
         try {
             return DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
@@ -154,11 +146,7 @@ public class CreateAccount implements ActionListener {
         }
     }
 
-<<<<<<< HEAD
    
-=======
-    // ActionListener to handle the sign-up button click
->>>>>>> 330a6e2ca53f9204d940975e187b169aa598d7ae
     public void actionPerformed(ActionEvent e) {
         String fname = firstNameText.getText();
         String lname = lastNameText.getText();
@@ -183,10 +171,6 @@ public class CreateAccount implements ActionListener {
                         stmt.setString(4, pass);
                         stmt.setString(5, mail);
                         stmt.setString(6, cnumber);
-<<<<<<< HEAD
-=======
-
->>>>>>> 330a6e2ca53f9204d940975e187b169aa598d7ae
                         stmt.executeUpdate();
                         showMessageDialog(null, "Account Created Successfully");
                         CreateAccountframe.setVisible(false);

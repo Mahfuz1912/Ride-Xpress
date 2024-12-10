@@ -139,7 +139,7 @@ public class payment2 extends JFrame {
     }
 
 		public static void main(String[] args) {
-        payment1 frame = new payment1();
+        payment2 frame = new payment2();
         frame.setVisible(true);
        }
 	
