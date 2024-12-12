@@ -78,7 +78,7 @@ public class bike extends JFrame {
 		btn3 = new JButton("Price");
         btn3.setBounds(610, 210, 100, 30);
         btn3.setFont(f3);
-        //btn2.setCursor(cursor);
+        
         btn3.setForeground(Color.WHITE);
         btn3.setBackground(Color.decode("#C00060"));
         c.add(btn3);

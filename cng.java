@@ -47,14 +47,14 @@ public class cng extends JFrame {
             }
         });
 		
-		j1 = new JLabel("Driver: 1 | CNG Model: JEEP");
+		j1 = new JLabel("Driver: 1 | CNG Model: Runner");
 		j1.setFont(f2);
 		j1.setBackground(Color.white);
 		j1.setForeground(Color.black);
 		j1.setBounds(300,40,1000,30);
 		c.add(j1);
 		
-		j2 = new JLabel("Driver: 2 | CNG Model: Tata");
+		j2 = new JLabel("Driver: 2 | CNG Model: Tvs");
 		j2.setFont(f2);
 		j2.setBackground(Color.white);
 		j2.setForeground(Color.black);
