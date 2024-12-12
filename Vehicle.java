@@ -14,7 +14,7 @@ public class Vehicle extends JFrame {
 	Vehicle() {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Ride Xpress");
-        this.setSize(960, 600);
+        this.setSize(965, 600);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
 		

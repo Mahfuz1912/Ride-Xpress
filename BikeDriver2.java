@@ -46,7 +46,7 @@ public class BikeDriver2 extends JFrame {
 		btn1 = new JButton("Back");
         btn1.setBounds(20, 480, 100, 30);
         btn1.setFont(f2);
-        //btn1.setCursor(cursor);
+        
         btn1.setForeground(Color.black);
         btn1.setBackground(Color.decode("#C00000"));
         getContentPane().add(btn1);
@@ -85,7 +85,7 @@ public class BikeDriver2 extends JFrame {
         getContentPane().add(DriverNameLabel5);
         DriverNameLabel5.setBounds(625, 357, 600, 30);
 		
-		DriverNameLabel6.setFont(new Font("Autography", Font.PLAIN, 19));
+		DriverNameLabel6.setFont(new Font("Comic Sans MS", 2, 20));
 		DriverNameLabel6.setForeground(Color.black);
         DriverNameLabel6.setText("Vini Jr.");
         getContentPane().add(DriverNameLabel6);

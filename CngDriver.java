@@ -61,13 +61,13 @@ public class CngDriver extends JFrame {
 
         DriverNameLabel2.setFont(new Font("Arial", Font.PLAIN, 24));
         DriverNameLabel2.setForeground(Color.black);
-        DriverNameLabel2.setText("RANVIR");
+        DriverNameLabel2.setText("HASIB");
         getContentPane().add(DriverNameLabel2);
         DriverNameLabel2.setBounds(390, 275, 350, 30);
 
         DriverNameLabel3.setFont(new Font("Arial", Font.PLAIN, 24));
 		DriverNameLabel3.setForeground(Color.black);
-        DriverNameLabel3.setText("KAPOOR");
+        DriverNameLabel3.setText("HASAN");
         getContentPane().add(DriverNameLabel3);
         DriverNameLabel3.setBounds(390, 305, 600, 30);
 
@@ -83,9 +83,9 @@ public class CngDriver extends JFrame {
         getContentPane().add(DriverNameLabel5);
         DriverNameLabel5.setBounds(625, 357, 600, 30);
 		
-		DriverNameLabel6.setFont(new Font("Autography", Font.PLAIN, 19));
+		DriverNameLabel6.setFont(new Font("Comic Sans MS", 2, 20));
 		DriverNameLabel6.setForeground(Color.black);
-        DriverNameLabel6.setText("ranvir Kapoor");
+        DriverNameLabel6.setText("HASIB");
         getContentPane().add(DriverNameLabel6);
         DriverNameLabel6.setBounds(270, 430, 600, 30);
 

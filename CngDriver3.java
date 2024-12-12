@@ -85,9 +85,9 @@ public class CngDriver3 extends JFrame {
         getContentPane().add(DriverNameLabel5);
         DriverNameLabel5.setBounds(625, 357, 600, 30);
 
-        DriverNameLabel6.setFont(new Font("Autography", Font.PLAIN, 19));
+        DriverNameLabel6.setFont(new Font("Comic Sans MS", 2, 20));
 		DriverNameLabel6.setForeground(Color.black);
-        DriverNameLabel6.setText("Sakib");
+        DriverNameLabel6.setText("SAKIB");
         getContentPane().add(DriverNameLabel6);
         DriverNameLabel6.setBounds(270, 430, 600, 30);
 
@@ -101,10 +101,10 @@ public class CngDriver3 extends JFrame {
     }
 
     private void BackActionPerformed(ActionEvent evt) {
-        // Handle back button action
+       
         System.out.println("Back button pressed");
-        // Close current frame or navigate to previous frame
-        this.dispose(); // Close the current window
+        
+        this.dispose(); 
     }
 
     public static void main(String args[]) {

@@ -85,9 +85,9 @@ public class BikeDriver1 extends JFrame {
         getContentPane().add(DriverNameLabel5);
         DriverNameLabel5.setBounds(625, 357, 600, 30);
 		
-		DriverNameLabel6.setFont(new Font("Autography", Font.PLAIN, 19));
+		DriverNameLabel6.setFont(new Font("Comic Sans MS", 2, 20));
 		DriverNameLabel6.setForeground(Color.black);
-        DriverNameLabel6.setText("Rohit Sharma");
+        DriverNameLabel6.setText("Rohit");
         getContentPane().add(DriverNameLabel6);
         DriverNameLabel6.setBounds(270, 430, 600, 30);
         BackgroundImage.setIcon(new ImageIcon(getClass().getResource("/Images/License.png"))); 

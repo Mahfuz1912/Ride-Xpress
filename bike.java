@@ -60,7 +60,7 @@ public class bike extends JFrame {
 		btn2 = new JButton("CALL");
         btn2.setBounds(500, 210, 100, 30);
         btn2.setFont(f2);
-        //btn2.setCursor(cursor);
+     
         btn2.setForeground(Color.WHITE);
         btn2.setBackground(Color.decode("#00C000"));
         c.add(btn2);
@@ -102,7 +102,7 @@ public class bike extends JFrame {
 		btn4 = new JButton("Info");
         btn4.setBounds(720, 210, 100, 30);
         btn4.setFont(f2);
-        //btn2.setCursor(cursor);
+      
         btn4.setForeground(Color.WHITE);
         btn4.setBackground(Color.decode("#0000C0"));
         c.add(btn4);
@@ -118,7 +118,7 @@ public class bike extends JFrame {
 		btn5 = new JButton("CALL");
         btn5.setBounds(560, 410, 100, 30);
         btn5.setFont(f2);
-        //btn2.setCursor(cursor);
+        
         btn5.setForeground(Color.WHITE);
         btn5.setBackground(Color.decode("#00C000"));
         c.add(btn5);
@@ -136,7 +136,7 @@ public class bike extends JFrame {
 		btn6 = new JButton("Price");
         btn6.setBounds(670, 410, 100, 30);
         btn6.setFont(f3);
-        //btn2.setCursor(cursor);
+       
         btn6.setForeground(Color.WHITE);
         btn6.setBackground(Color.decode("#C00060"));
         c.add(btn6);
@@ -158,7 +158,7 @@ public class bike extends JFrame {
 		btn7 = new JButton("Info");
         btn7.setBounds(780, 410, 100, 30);
         btn7.setFont(f2);
-        //btn2.setCursor(cursor);
+      
         btn7.setForeground(Color.WHITE);
         btn7.setBackground(Color.decode("#0000C0"));
         c.add(btn7);
