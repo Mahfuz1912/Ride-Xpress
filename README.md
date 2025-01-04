@@ -49,4 +49,4 @@ If you'd like to contribute to this project, feel free to fork the repository (i
 
 ## Contact
 
-For any questions or feedback, feel free to [Sabit Al Mahfuz, e.g., smahfuz945@gmail.com, issue tracker link].
+For any questions or feedback, feel free to [Sabit Al Mahfuz, smahfuz945@gmail.com,].
