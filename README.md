@@ -25,7 +25,7 @@ This project implements a ride-sharing application using Java and potentially in
    - Use a command like `javac -cp .:E:\Class\Project\OOP\Ride\Xpress\mysql-connector-j-9.1.0.jar Start.java` (modify the path and JAR file name as needed). This will compile your Java source code into class files.
 
 2. **Run the Compiled Code:**
-   - After successful compilation, run the application using a command like `java -cp .:E:\Class\Project\OOP\Ride\Xpress\mysql-connector-j-9.1.0.jar Start` (modify the path and JAR file name as needed). This will execute the `Start.java` class, which is likely the entry point of your application.
+   - After successful compilation, run the application using a command like `java -cp .;"E:\Class Project OOP\Ride Xpress\mysql-connector-j-9.1.0.jar" Start.java `. This will execute the `Start.java` class, which is likely the entry point of your application.
 
 **Additional Considerations:**
 
@@ -49,4 +49,4 @@ If you'd like to contribute to this project, feel free to fork the repository (i
 
 ## Contact
 
-For any questions or feedback, feel free to [insert contact information, e.g., email address, issue tracker link].
+For any questions or feedback, feel free to [Sabit Al Mahfuz, e.g., smahfuz945@gmail.com, issue tracker link].
