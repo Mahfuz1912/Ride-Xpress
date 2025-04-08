@@ -97,7 +97,7 @@ public class payment2 extends JFrame {
 
                 PaymentHistoryDatabase db = new PaymentHistoryDatabase();
                 db.connect();
-                db.savePaymentHistory(cardHolderName, cardNumber, validOn, cvvCode, paymentStatus);
+               db.savePaymentHistory(cardHolderName, cardNumber, validOn, cvvCode, paymentStatus);
 
                 JOptionPane.showMessageDialog(null, "Payment Complete!");
             }

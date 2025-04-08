@@ -93,9 +93,9 @@ public class LoginPage extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Please Enter Username and Password");
             } else {
                
-                String url = "jdbc:mysql://localhost:3306/ridexpress"; 
+                String url = "jdbc:mysql://localhost:3306/ride_xpress"; 
                 String dbUsername = "root"; 
-                String dbPassword = "Mahfuz@5101912";
+                String dbPassword = "";
                 
                 try {
                     

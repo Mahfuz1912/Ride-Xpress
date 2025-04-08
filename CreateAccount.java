@@ -135,9 +135,9 @@ public class CreateAccount implements ActionListener {
 
     
     private Connection connectToDatabase() {
-        String url = "jdbc:mysql://localhost:3306/ridexpress";
+        String url = "jdbc:mysql://localhost:3306/ride_xpress";
         String user = "root"; 
-        String password = "Mahfuz@5101912";
+        String password = "";
         try {
             return DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {

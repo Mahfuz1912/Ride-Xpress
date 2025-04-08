@@ -22,7 +22,7 @@ public class Homeus2 extends JFrame implements ActionListener {
             "Rampura", "Sabujbagh", "Shah Ali", "Shahbag", "Shahjahanpur", "Sher-e-Bangla Nagar", "Shyampur", "Sutrapur",
             "Tejgaon", "Tejgaon Industrial Area", "Turag", "Uttar Khan", "Vatara", "Bashundhara", "Mirpur-12"};
 
-   public Homeus2() {
+    public Homeus2() {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Ride Xpress");
         this.setSize(960, 600);
@@ -62,11 +62,12 @@ public class Homeus2 extends JFrame implements ActionListener {
         c2.setEditable(true);
         c2.setForeground(Color.blue);
         c.add(c2);
+
         submitButton = new JButton("Lets go");
         submitButton.addActionListener(this);
         submitButton.setBounds(230, 350, 100, 30);
         submitButton.setBackground(Color.green);
-        submitButton.setForeground(Color.green);
+        submitButton.setForeground(Color.black); // Changed from green to black for visibility
         c.add(submitButton);
 
         icon = new ImageIcon(getClass().getResource("/Images/FrameIcon.png"));
@@ -81,7 +82,6 @@ public class Homeus2 extends JFrame implements ActionListener {
 
         btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-
                 LoginPage us = new LoginPage();
                 us.setVisible(true);
                 setVisible(false);
@@ -97,7 +97,6 @@ public class Homeus2 extends JFrame implements ActionListener {
 
         btn2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-
                 Country us = new Country();
                 us.setVisible(true);
                 setVisible(false);
@@ -123,16 +122,28 @@ public class Homeus2 extends JFrame implements ActionListener {
         if (ae.getSource() == submitButton) {
             String selectedFrom = (String) c1.getSelectedItem();
             String selectedTo = (String) c2.getSelectedItem();
-            double cost;
-            if (selectedFrom != null && selectedTo != null) {
-                if ((selectedFrom.equals("A") && selectedTo.equals("B")) || (selectedFrom.equals("A1") && selectedTo.equals("B1"))) {
-                    cost = 10.0;
-                } else {
-                    cost = 6.0;
-                }
-                Mydata data = new Mydata(c1, c2, cost);
-                new SecondGUI(data);
+            
+            // Validate selections
+            if (selectedFrom.equals("From") || selectedTo.equals("To")) {
+                JOptionPane.showMessageDialog(this, 
+                    "Please select valid 'From' and 'To' locations", 
+                    "Selection Error", 
+                    JOptionPane.ERROR_MESSAGE);
+                return;
             }
+            
+            // Calculate cost
+            double cost;
+            if ((selectedFrom.equals("A") && selectedTo.equals("B")) || 
+                (selectedFrom.equals("A1") && selectedTo.equals("B1"))) {
+                cost = 10.0;
+            } else {
+                cost = 6.0;
+            }
+            
+            // Create data object with selected values
+            Mydata data = new Mydata(selectedFrom, selectedTo, cost);
+            new SecondGUI(data);
         }
     }
 
